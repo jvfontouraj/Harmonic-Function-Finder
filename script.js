@@ -6,7 +6,7 @@ const harmonicFunction = {
     tonic: '',
     supertonic: '',
     mediant: '' ,
-    subdominat: '',
+    subdominant: '',
     dominat: '',
     submediant: '',
     leadingTone: '',
@@ -30,7 +30,7 @@ document.querySelector('.find').addEventListener('click', function(){
         harmonicFunction.tonic = notes[numbersScale[0]]+"7M"
         harmonicFunction.supertonic = notes[numbersScale[1]]+"m7"
         harmonicFunction.mediant = notes[numbersScale[2]]+"m7"
-        harmonicFunction.subdominat = notes[numbersScale[3]]+"7M"
+        harmonicFunction.subdominant = notes[numbersScale[3]]+"7M"
         harmonicFunction.dominat = notes[numbersScale[4]]+"7"
         harmonicFunction.submediant = notes[numbersScale[5]]+"m7"
         harmonicFunction.leadingTone = notes[numbersScale[6]]+"m7(b5)"
@@ -46,14 +46,13 @@ document.querySelector('.find').addEventListener('click', function(){
         console.log(harmonicFunction)
     }
     
-    document.querySelector('.display--result').textContent = 
-    "Tonic (I):" + harmonicFunction.tonic + ", " +
-    "Supertonic (II):" + harmonicFunction.supertonic + ", " +
-    "Mediant (III):"+harmonicFunction.mediant + ", " +
-    "Subdominat (IV):"+harmonicFunction.subdominat + ", " +
-    "Dominat (V):" + harmonicFunction.dominat + ", " +
-    "Submediant (VI):"+harmonicFunction.submediant + ", " +
-    "Leading Tone (VII):"+harmonicFunction.leadingTone
+    document.querySelector('.tonic').textContent = "Tonic (I):" + " " +  harmonicFunction.tonic
+    document.querySelector('.supertonic').textContent = "Supertonic (II):" + " " +  harmonicFunction.supertonic
+    document.querySelector('.mediant').textContent = "Mediant (III):"+ " " + harmonicFunction.mediant
+    document.querySelector('.subdominant').textContent = "Subdominant (IV):"+ " " + harmonicFunction.subdominant
+    document.querySelector('.dominant').textContent = "Dominat (V):" + " " +  harmonicFunction.dominat
+    document.querySelector('.submediant').textContent ="Submediant (VI):"+ " " + harmonicFunction.submediant
+    document.querySelector('.leading--tone').textContent = "Leading Tone (VII):"+ " " + harmonicFunction.leadingTone
     
     numbersScale = []
 })
